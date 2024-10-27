@@ -1,0 +1,57 @@
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+\usepackage[pagenumbers]{cvpr}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage[pagebackref,breaklinks,colorlinks]{hyperref}
+\usepackage[capitalize]{cleveref}
+\usepackage[numbers]{natbib}
+
+\begin{document}
+
+%%%%%%%%% TITLE - PLEASE UPDATE
+\title{Project Milestone Template (replace this with your project title)}
+
+\author{First Member\\
+{\tt\small email}
+\and
+Second Member\\
+{\tt\small email}
+}
+\maketitle
+
+
+%-------------------------------------------------------------------------
+\section{Introduction}
+
+The project addresses driver fatigue detection, aiming to reduce road accidents by monitoring drivers’ eye closure duration. The goal is to detect fatigue signs using live video and a machine learning model. Progress includes identifying relevant features from dataset (CEW dataset) and implementing Viola Jones (Haar cascade) classifiers for face and eye detection. We are also working on training a eye detection model using a CNN for real-time classification of eye states (open or closed) to assess fatigue.
+
+\section{Problem Statement}
+
+The problem is detecting driver fatigue, a major cause of road accidents, by monitoring eye closure duration to indicate drowsiness levels. The CEW dataset will be used to train a CNN for classifying eye states. Success would mean accurate real-time detection of closed eyes over extended periods, prompting alerts when fatigue is identified. Challenges include ensuring accurate detection across varied lighting conditions, face angles, etc.
+
+\section{Related Work}
+Mention a few application areas. Also, contrast your approach with prior work. For example, Singh et al.~\cite{DBLP:conf/cvpr/SinghJL23} did this and we are doing that.
+
+\section{Dataset}
+The CEW (Closed Eyes in the Wild) dataset is used, containing labeled images of open and closed eyes across varied lighting, backgrounds, and facial features. It contains 2k 24x24 sized images for open and closed eyes. This dataset enables a balanced and diverse training set for distinguishing eye states under realistic conditions.
+
+\section{Technical Approach}
+
+The CEW (Closed Eyes in the Wild) dataset will be used, containing labeled images of open and closed eyes across varied lighting, backgrounds, and facial features. This dataset enables a balanced and diverse training set for distinguishing eye states under realistic conditions.
+
+
+\section{Intermediate/Preliminary Results}
+
+Preliminary testing with the Haar cascade classifiers shows effective face and eye localization in controlled lighting. We hypothesize that the CNN model, once deployed, will achieve high accuracy in detecting closed eyes, with thresholds to assess fatigue based on prolonged eye closure. Future tests will evaluate model accuracy and tweak thresholds for fatigue assessment. 
+
+
+%%%%%%%%% REFERENCES
+{\small
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{bibliography}
+}
+
+\end{document}
